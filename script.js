@@ -16,6 +16,14 @@ $(function(){
            ' and '+randomize(parentsand)+".";
   }
 
+  function copyText(c) {
+    $('body').append('<textarea type=hidden class="copyText"></textarea>')
+    $('.copyText').val($(c).text()).select();
+    document.execCommand('copy');
+    $('.copyText').remove();
+    $('.message').append('<p class="copy">Coppied to clipboard <span class="close">X</span></p>')
+  }
+
   villan = [
     'kyle ren',
     'malloc',
@@ -93,6 +101,15 @@ $(function(){
   $('#Generate').on('click', function() {
     $('.text p').text(generate());
   });
+
+  $('#Share').on('click', function() {
+    copyText('.text p');
+  });
+
+  // Remove elements with the close class
+  $(document).on('click', '.close', function() {
+    $(this).parent().remove();
+  })
 
   // Generate the first text
   $('.text p').text(generate());

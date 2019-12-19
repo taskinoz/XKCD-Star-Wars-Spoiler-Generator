@@ -20,10 +20,24 @@ body{
 .container{
   max-width: 1000px;
   display: inline-block;
-  padding: 0 20px; 
+  padding: 0 20px;
 }
 .text{
   min-height: 120px;
+}
+.copy{
+  color: #fff;
+  background: #39ab39;
+  display: inline-block;
+  padding: 5px 10px;
+  border-radius: 5px;
+}
+.close{
+  margin-left: 20px;
+  font-weight: 900;
+}
+.close:hover{
+  transform: scale(1.1);
 }
 
 /* BUTTON STYLE */
