@@ -1,0 +1,44 @@
+/* Font Source: https://github.com/ipython/xkcd-font */
+@font-face {
+  font-family: "XKCD";
+  src: url("font/xkcd-script.ttf") format("truetype"),
+       url("font/xkcd-script.woff") format("woff");
+}
+
+html,
+body{
+  border: 0;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  font-family: "XKCD";
+  text-align: center;
+}
+
+.container{
+  max-width: 1000px;
+  display: inline-block;
+  padding: 0 20px; 
+}
+.text{
+  min-height: 120px;
+}
+
+/* BUTTON STYLE */
+button{
+  color: #000;
+  background: #fff;
+  border: 2px #000 solid;
+  border-radius: 5px;
+  font-family: "XKCD";
+  text-transform: capitalize;
+  font-size: 16px;
+  padding: 5px 10px;
+  transition: 0.3s;
+}
+button:hover{
+  color: #fff;
+  background: #000;
+}
